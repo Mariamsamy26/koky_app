@@ -19,7 +19,7 @@ class ColorScreen extends StatelessWidget {
             Text(
               data["Text"] !,
               style: TextStyle(color: Colors.white
-              ,fontSize: 30),
+              ,fontSize: 80),
             )
           ],
         ),
