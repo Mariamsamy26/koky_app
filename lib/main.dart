@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'baseScreen.dart';
+import 'color/baseScreen.dart';
+import 'homeScreen.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: BaseScreen(),
+    home: HomeScreen(),
   ));
 
 }

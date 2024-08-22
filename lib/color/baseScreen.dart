@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'colorScreen.dart';
 
-class BaseScreen extends StatelessWidget {
+class BaseColorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,6 @@ class BaseScreen extends StatelessWidget {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-
               colors: [
                 Colors.black38,
                 Colors.purple,
@@ -101,12 +100,11 @@ class BaseScreen extends StatelessWidget {
     {"Text": "Navy", "Color": Colors.blue[900]},
     {"Text": "Olive", "Color": Colors.green[800]},
     {"Text": "Orange", "Color": Colors.orange},
-    {"Text": "Orange Accent", "Color": Colors.orangeAccent},
     {"Text": "Peach", "Color": Colors.orange[300]},
     {"Text": "Pink", "Color": Colors.pink},
     {"Text": "Pink Accent", "Color": Colors.pinkAccent},
     {"Text": "Purple", "Color": Colors.purple},
-    {"Text": "Purple Accent", "Color": Colors.purpleAccent},
+    {"Text": "baby Purple ", "Color": Colors.purpleAccent},
     {"Text": "Red", "Color": Colors.red},
     {"Text": "Red Accent", "Color": Colors.redAccent},
     {"Text": "Scarlet", "Color": Colors.red[900]},
