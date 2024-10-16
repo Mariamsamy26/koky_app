@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../combonent/conbonent_buttome.dart';
 
@@ -7,42 +9,45 @@ class BaseNumScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         title: Text(
           "Numbers",
-          style: TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.black, fontSize: 45),
-        ),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/numbersApp.png'),
-              fit: BoxFit.cover,
-            ),
+          style: GoogleFonts.sevillana(
+            fontWeight: FontWeight.bold,
+            fontSize: 50,
+            color: Colors.black,
           ),
         ),
+
       ),
-      body: SafeArea(
-        child: Container(
-          color: Colors.black12,
-          width: double.infinity,
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                for (int i = 0; i < num.length; i++)
-                  CustomNews(
-                    width: 300,
-                    height: 200,
-                    urlImage: num[i]["img"]!,
-                    title: num[i]["Text"]!,
-                    onTap: () {},
-                  ),
-              ],
+      body: Stack(
+          children: [
+            Image.asset('assets/images/backNum.png',
+              fit: BoxFit.fill,
+              width: double.infinity,
+              height: double.infinity,),
+            Container(
+              color: Colors.transparent,
+              width: double.infinity,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    for (int i = 0; i < num.length; i++)
+                      CustomNews(
+                        width: 300,
+                        height: 200,
+                        urlImage: num[i]["img"]!,
+                        title: num[i]["Text"]!,
+                        onTap: () {},
+                      ),
+                  ],
+                ),
+              ),
             ),
-          ),
-        ),
+          ],
       ),
     );
   }
